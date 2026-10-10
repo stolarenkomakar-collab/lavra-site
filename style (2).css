@@ -1,0 +1,281 @@
+/* ==================================================
+   НАВЧАЛЬНИЙ CSS-ФАЙЛ
+   Тема: 975 років Києво-Печерській лаврі
+   ================================================== */
+
+
+/* ---------- ЗАГАЛЬНІ НАЛАШТУВАННЯ ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    /* ЗМІНА 1: змініть колір фону сторінки */
+    background-color: #f5f0e6;
+
+    color: #3b3027;
+    line-height: 1.6;
+}
+
+
+/* ---------- ШАПКА САЙТУ ---------- */
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+
+    /* ЗМІНА 2: спробуйте змінити колір шапки */
+    background-color: #5b2c36;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.anniversary {
+    font-size: 22px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    /* ЗМІНА 3: змініть розмір головного заголовка */
+    font-size: 56px;
+
+    margin: 0 0 20px;
+}
+
+.hero-text {
+    font-size: 21px;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+
+/* ---------- КНОПКИ ---------- */
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+
+    /* ЗМІНА 4: змініть колір кнопки */
+    background-color: #c99a3b;
+
+    color: #3b3027;
+    text-decoration: none;
+
+    /* ЗМІНА 5: змініть 6px на 0px або 30px */
+    border-radius: 30px;
+
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #dfb85b;
+}
+
+
+/* ---------- ОСНОВНІ РОЗДІЛИ ---------- */
+
+.section {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 70px 25px;
+}
+
+.section h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+.intro {
+    max-width: 800px;
+    text-align: center;
+}
+
+
+
+/* ---------- ФОТОГРАФІЇ ---------- */
+
+.main-photo {
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 22px;
+    display: block;
+}
+
+.card-photo {
+    width: 100%;
+    height: 190px;
+
+    /* ЗМІНА 6: спробуйте contain замість cover */
+    object-fit: contain;
+
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.credits {
+    font-size: 13px;
+    opacity: 0.75;
+}
+
+/* ---------- КАРТКИ ---------- */
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 25px;
+
+    /* ЗМІНА 6: змініть округлення карток */
+    border-radius: 22px;
+
+    border: 1px solid #dfd1bd;
+}
+
+.card h3 {
+    margin-top: 5px;
+}
+
+.year {
+    font-size: 24px;
+    font-weight: bold;
+    color: #9a5b35;
+}
+
+
+/* ---------- ЦІКАВІ ФАКТИ ---------- */
+
+.facts {
+    text-align: center;
+}
+
+.fact-list {
+    display: flex;
+    gap: 20px;
+}
+
+.fact {
+    flex: 1;
+    padding: 20px;
+}
+
+.fact-number {
+    display: block;
+
+    /* ЗМІНА 7: спробуйте змінити 44px */
+    font-size: 48px;
+
+    font-weight: bold;
+    color: #9a5b35;
+}
+
+
+/* ---------- БЛОК ІЗ ЗАВДАННЯМ ---------- */
+
+.task {
+    text-align: center;
+    background-color: #eee1d0;
+    max-width: 100%;
+}
+
+.task p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+.secondary-button {
+    background-color: #5b2c36;
+    color: white;
+}
+
+
+/* ---------- ФУТЕР ---------- */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #3b3027;
+    color: white;
+}
+
+
+/* ---------- АДАПТАЦІЯ ДЛЯ ВУЗЬКОГО ЕКРАНА ---------- */
+
+@media (max-width: 700px) {
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .cards,
+    .fact-list {
+        flex-direction: column;
+    }
+}
+
+
+/* ---------- МОЇ ДОДАТКОВІ ЗМІНИ ---------- */
+
+.button {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.card {
+    box-shadow: 0 6px 18px rgba(35, 75, 58, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(35, 75, 58, 0.14);
+}
+
+.main-photo {
+    height: 380px;
+    object-fit: cover;
+}
+
+@media (max-width: 700px) {
+    .main-photo {
+        height: auto;
+    }
+
+    .hero {
+        min-height: 420px;
+    }
+
+    .anniversary {
+        font-size: 17px;
+        letter-spacing: 2px;
+    }
+
+    .hero-text {
+        font-size: 18px;
+    }
+}
